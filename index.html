@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    </script>
+    <link href="./style.css" rel="stylesheet" />
+</head>
+
+<body class="" id="grid">
+    <div class="browser-landing" id="main">
+        <div class="compact marquee-stacked" id="marquee">
+            <div class="marquee-copy">
+                <h1>
+                    Web Speech API Demonstration
+                </h1>
+            </div>
+        </div>
+        <div class="compact marquee">
+            <div id="info">
+                <p id="info_start">
+                    Click on the microphone icon and begin speaking for as long as you like.
+                </p>
+                <p id="info_speak_now" style="display:none">
+                    Speak now.
+                </p>
+                <p id="info_no_speech" style="display:none">
+                    No speech was detected. You may need to adjust your microphone
+                    settings.
+                </p>
+                <p id="info_no_microphone" style="display:none">
+                    No microphone was found. Ensure that a microphone is installed and that
+                    microphone settings are configured correctly.
+                </p>
+                <p id="info_allow" style="display:none">
+                    Click the "Allow" button above to enable your microphone.
+                </p>
+                <p id="info_denied" style="display:none">
+                    Permission to use microphone was denied.
+                </p>
+                <p id="info_blocked" style="display:none">
+                    Permission to use microphone is blocked. To change, go to
+                    chrome://settings/contentExceptions#media-stream
+                </p>
+                <p id="info_upgrade" style="display:none">
+                    Web Speech API is not supported by this browser. Upgrade to Chrome version 25 or later.
+                </p>
+            </div>
+            <div id="div_start">
+                <button id="start_button" onclick="startButton(event)"><img alt="Start" id="start_img"
+                        src="https://www.google.com/intl/en/chrome/assets/common/images/content/mic.gif"></button>
+            </div>
+            <div id="results">
+                <span class="final" id="final_span"></span> <span class="interim" id="interim_span"></span>
+            </div>
+            <div class="compact marquee" id="div_language">
+                <select id="select_language" onchange="updateCountry()">
+                </select>&nbsp;&nbsp; <select id="select_dialect">
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js" />
+</body>
+
+</html>
